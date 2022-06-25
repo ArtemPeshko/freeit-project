@@ -27,9 +27,9 @@ public class IfElseSwitchConstructors {
         String[] letters = {"а", "е", "Є", "и", "у", "ы", "э", "о", "ю", "€"};
         String letter = name.substring(name.length() - 1);
         if (Arrays.asList(letters).contains(letter)) {
-            return "∆енщина";
+            return "∆енщина2";
         } else {
-            return "ћужчина";
+            return "ћужчина2";
         }
     }
 
