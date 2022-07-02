@@ -12,9 +12,7 @@ public class Casting {
         long l = 5L;
         float f = 0.5f;
         double d = 0.5;
-
         int a = 127;
-
         byte bt = (byte) a;
     }
 }
