@@ -9,5 +9,7 @@ package com.freeit.lesson9.inheritance;
 public class Runner {
     public static void main(String[] args) {
         Animal tom = new Cat("earth", "Mein-kun", "Tom");
+
+        tom.eat();
     }
 }

@@ -12,6 +12,10 @@ public class Animal {
 
     private String environment;
 
+    public void eat() {
+        System.out.println("all animals can eat");
+    }
+
     @Override
     public String toString() {
         return "Animal{" +

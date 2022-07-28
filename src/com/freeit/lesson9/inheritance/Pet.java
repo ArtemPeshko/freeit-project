@@ -13,6 +13,11 @@ public class Pet extends Animal{
         this.breed = breed;
     }
 
+//    @Override
+//    public void eat() {
+//        System.out.println("Pet can eat");
+//    }
+
     @Override
     public String toString() {
         return "Pet{" +

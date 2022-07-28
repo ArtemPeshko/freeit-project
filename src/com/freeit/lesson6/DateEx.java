@@ -1,7 +1,11 @@
 package com.freeit.lesson6;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Artem Peshko on 05.07.2022
@@ -26,18 +30,12 @@ public class DateEx {
 //        System.out.println(dt);
 
 //        GregorianCalendar calendar = new GregorianCalendar();
-//        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy hh:mm");
-//        System.out.println(sdf.format(new Date()));
-//        System.out.println(calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.UK));
-//        System.out.println(calendar.get(Calendar.YEAR));
 
-        LocalDate ld = LocalDate.now();
-        System.out.println(ld);
-        ld = ld.plusDays(5);
-        System.out.println(ld);
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm", Locale.ROOT);
+        String dateTimeFromUser = "12.01.2022 23:00";
 
-        LocalDateTime ldt = LocalDateTime.now();
-        int dayOfYear = ldt.getDayOfYear();
-        System.out.println(dayOfYear);
+        LocalDateTime ld = LocalDateTime.parse(dateTimeFromUser, dateTimeFormatter);
+        System.out.println(ld);
+        System.out.println(dateTimeFormatter.format(ld));
     }
 }
