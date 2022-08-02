@@ -43,4 +43,4 @@ public class PhoneRunner {
             System.out.println("Annotation IsSecretPhone is not presented");
         }
     }
-}
+}//https://t.me/+uuSjZGFkQbYxMDAy
