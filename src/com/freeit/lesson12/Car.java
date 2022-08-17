@@ -1,5 +1,7 @@
 package com.freeit.lesson12;
 
+import java.util.Objects;
+
 /**
  * Created by Artem Peshko on 28.07.2022
  * E-Mail artem.peshko@alseda.by
@@ -33,6 +35,23 @@ public class Car {
                 System.out.println(model + year);
             }
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return year == car.year &&
+                model.equals(car.model);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 9;
+        hash = 31 * hash + year;
+        hash = 31 * hash + (model == null ? 0 : model.hashCode());
+        return hash;
     }
 
     @Override
